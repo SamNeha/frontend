@@ -1,20 +1,24 @@
 import React, { useEffect, useState } from "react";
-import Doctor from "../Assets/doctor-picture.png";
+import Doctor from "../Assets/doc.jpg";
+import video from "../Assets/video.mp4";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarCheck, faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate  } from "react-router-dom";
+import { faAngleUp, faVideo } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/Hero.css";
 
+
 function Hero() {
-  const navigate = useNavigate();
   const [goUp, setGoUp] = useState(false);
+  const [isVideoModalOpen, setVideoModalOpen] = useState(false);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  const openVideoModal = () => {
+    setVideoModalOpen(true);
+  };
 
-  const handleBookAppointmentClick = () => {
-    navigate("/appointment");
+  const closeVideoModal = () => {
+    setVideoModalOpen(false);
   };
 
   useEffect(() => {
@@ -26,12 +30,7 @@ function Hero() {
       }
     };
     window.addEventListener("scroll", onPageScroll);
-
-    return () => {
-      window.removeEventListener("scroll", onPageScroll);
-    };
-  }, []);
-
+  },[]);
   return (
     <div className="section-container">
       <div className="hero-section">
@@ -44,13 +43,12 @@ function Hero() {
             Talk to online doctors and get medical advice, online prescriptions,
             refills and medical notes within minutes. On-demand healthcare
             services at your fingertips.
-          </p>
+          </p><br></br>
           <button
             className="text-appointment-btn"
             type="button"
-            onClick={handleBookAppointmentClick}
-          >
-            <FontAwesomeIcon icon={faCalendarCheck} /> Book Appointment
+            onClick={openVideoModal}>
+            <FontAwesomeIcon icon={faVideo} /> Demo
           </button>
           <div className="text-stats">
             <div className="text-stats-container">
@@ -71,9 +69,10 @@ function Hero() {
         </div>
 
         <div className="hero-image-section">
-          <img className="hero-image1" src={Doctor} alt="Doctor" />
+          <img className="hero-image1" src={"https://gaganaeyehospital.com/assets/images/doctor-about/doctor-img.png"} alt="Doctor" />
         </div>
       </div>
+      
 
       <div
         onClick={scrollToTop}
@@ -81,6 +80,19 @@ function Hero() {
       >
         <FontAwesomeIcon icon={faAngleUp} />
       </div>
+      {isVideoModalOpen && (
+        <div className="video-modal">
+          <div className="video-modal-content">
+            <span className="video-modal-close" onClick={closeVideoModal}>
+              &times; 
+            </span><br></br>
+            <video controls>
+              <source src={video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

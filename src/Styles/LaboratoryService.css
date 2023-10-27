@@ -1,0 +1,323 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+h1{
+  font-size: 45px;
+  text-align: center;
+}
+.lab-service-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 2297px; /* Adjust the width as needed */
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   position: relative;
+  }
+  
+  .lab-image {
+    width: 2315px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  .live-chat-btn {
+    position: absolute;
+    top: 110px; /* Adjust the top and right values as needed */
+    right: 20px; /* Adjust the top and right values as needed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a bounding box shadow */
+    padding: 20px 25px;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 28px;
+    outline: transparent;
+    background-color: #1A8EFD;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: .8px;
+    cursor: pointer;
+    transition: all .4s ease;
+    position: fixed;
+   
+  }
+  .live-chat-btn:hover {
+    color: #1A8EFD;
+    background-color: white;
+    border: 1px solid #1A8EFD;
+}
+.cart-icon {
+  color: white;
+  border-radius: 50%;
+  padding: 1px;
+  cursor: pointer;
+  font-size: 24px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  top: -1px;
+  right: 20px;
+  position:fixed;
+}
+
+/* Cart item count */
+.cart-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 18px;
+  min-width: 10px;
+  text-align:center;
+  top: -10px;
+  right: -10px;
+}
+
+
+.card {
+  width: 200px; /* Adjust the width as needed */
+  margin-right: 10%; /* Adjust the spacing between cards as needed */
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  min-width: 400px;
+  margin: 0px;
+  padding: 60px;
+  background-color:rgba(206, 187, 187, 0.211);
+  font-size: 20px;
+  
+} 
+.card:hover {
+  transform: scale(1.05);
+}
+.card button {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row; /* Align cards vertically */
+  align-items: center; /* Center cards horizontally */
+}
+
+.card-content {
+  /* Add some padding to the card content */
+  padding: 20px;
+}
+.containe h1{
+  color:rgb(8, 59, 101);
+  font-size: 50px;
+  padding: 50px ;
+  
+}
+/* LaboratoryService.css */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  
+}
+
+.prev-button {
+  background-color: #007bff;
+  color:white;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 100px;
+}
+
+.next-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 100px;
+}
+
+/* Cart.css */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-modal {
+  background-color: rgb(175, 172, 237);
+  padding: 80px;
+  border-radius: 80px;
+  box-shadow: 0 4px 6px rgb(12, 8, 22);
+  max-width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  font-size: 20px;
+  
+}
+.cart-modal h2 {
+    font-size: 35px;
+}
+
+.cart-item {
+  border: 1px solid #2c0606;
+  background-color: rgb(220, 213, 213);
+  padding: 30px;
+  margin: 10px 0;
+}
+
+.cart-item h3 {
+  margin: 0;
+}
+
+.cart-item p {
+  margin: 15px 50px;
+  font-size: 18px;
+}
+
+.cart-item h2 {
+  margin: 0;
+  color: #007bff;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+/* Add this to your CSS stylesheet */
+.checkout-popup {
+  
+  top: 50%;
+  left: 50%;
+  transform: translate(10%, -0%);
+  background-color: rgb(187, 174, 174);
+  padding: 50px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-width: 1000px;
+  width: 500px;
+  border-radius: 80px;
+}
+
+.checkout-popup h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.checkout-popup form {
+  margin-bottom: 20px;
+}
+
+.checkout-popup .form-group {
+  margin-bottom: 20px;
+}
+
+.checkout-popup label {
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.checkout-popup input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 80px;
+  font-size: 18px;
+}
+.checkout-popup input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 80px;
+  font-size: 18px;
+}
+
+.checkout-popup button {
+  background-color: #007bff;
+  color: #fff;
+  border:none;
+  padding: 10px 10px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.checkout-popup button:hover {
+  background-color: #00b303;
+}
+/* Add this to your CSS file */
+.booking-message {
+  background-color: #a26891; /* Green background */
+  color: white; /* White text color */
+  text-align: center;
+  padding: 10px; /* Add padding for better styling */
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  
+ } 
+ 
+
+.error {
+  color: red;
+  font-size: 17px; /* You can adjust the font size as needed */
+}
+.alert {
+  background-color: #f5f6f8; /* Red background color */
+  color: red; /* White text color */
+  padding: 20px;
+  border-radius: 25px;
+  margin: 80px;
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  left: 780px;
+  font-size: 20px;
+  opacity: 0; /* Start with 0 opacity */
+  transform: scale(1.8); /* Start with a slightly smaller size */
+  transition: opacity 0.3s, transform 0.3s;
+}
+.alert.show {
+  opacity: 1; /* Fully visible */
+  transform: scale(1); /* Normal size */
+}
+.alert button{
+  border-radius: 50px;
+  font-size: 18px;
+}

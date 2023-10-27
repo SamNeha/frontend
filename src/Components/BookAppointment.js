@@ -1,5 +1,4 @@
 import React from "react";
-import Doctor from "../Assets/doctor-book-appointment.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleCheck,
@@ -18,7 +17,7 @@ function BookAppointment() {
   return (
     <div className="ba-section">
       <div className="ba-image-content">
-        <img src={Doctor} alt="Doctor Group" className="ba-image1" />
+        <img src= "https://www.motherhoodindia.com/wp-content/uploads/2021/09/Contact-page-Book-an-Appointment_Mobile-banner_578X364-px-02.jpg" alt="Doctor Group" className="ba-image1" />
       </div>
 
       <div className="ba-text-content">

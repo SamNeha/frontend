@@ -44,13 +44,24 @@
     align-items: center;
     gap: 32px;
 }
+.dt-cards-popupContent{
+    font-size: 56px;
+    padding: 50px;
+    width: 800px;
+} 
 .dt-card {
-    width: 332px;
-    height: 400px;
+    width: 350px;
+    height: 450px;
     gap: 32px;
     text-align: left;
     font-family: 'Rubik', sans-serif;
+    padding: 12px;
+    transition: transform 0.3s ease-in-out;
 }
+.dt-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
 .dt-card-img {
     width: 100%;
     height: 275px;
@@ -83,6 +94,71 @@
     font-weight: bold;
     letter-spacing: .7px;
 }
+.dt-card.image-clicked img {
+    filter:brightness(50%)
+    
+
+  }
+/* Card Styles */
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    max-width: 300px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  
+    /* Center the link */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  a {
+    text-decoration: none;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  /* Popup Styles */
+  .popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
 /* Responsive */
 @media screen and (max-width: 700px) {
     .dt-title {

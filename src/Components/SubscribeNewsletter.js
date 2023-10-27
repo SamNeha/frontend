@@ -1,35 +1,55 @@
+
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import Swal from 'sweetalert2';
 function SubscribeNewsletter() {
-  const [inputEmail, setInputEmail] = useState("");
+  const [email, setEmail] = useState('');
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
-  const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+ 
 
-  const handleEmailInput = (event) => {
-    setInputEmail(event.target.value);
-  };
+  const handleEmailInput = async (e) => {
+    e.preventDefault();
+    if (
+      email === '' 
+    ) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Validation Error',
+        text: 'Please fill email address',
+      });
+    } else {
+      try {
+        const response = await fetch('/sub', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+           
+            email,
+          }),
+        });
 
-  const handleBookAppointmentClick = () => {
-    if (!isButtonDisabled) {
-      emailRegex.test(inputEmail)
-        ? toast.success("Subscribed to Newsletter !", {
-            position: toast.POSITION.TOP_CENTER,
-            onOpen: () => {
-              setIsButtonDisabled(true);
-              setInputEmail("");
-            },
-            onClose: () => setIsButtonDisabled(false),
-          })
-        : toast.error("Invalid Email Address !", {
-            position: toast.POSITION.TOP_CENTER,
-            onOpen: () => setIsButtonDisabled(true),
-            onClose: () => setIsButtonDisabled(false),
+        if (response.ok) {
+          
+          Swal.fire({
+            icon: 'success',
+            title: 'Subscription Successful',
+            text: 'You have successfully subscribed to our newsletter!',
           });
+        
+      } else {
+      const data = await response.json();
+      console.error(data); // Log the error response to the console
+      alert('An error occurred during registration');
     }
+  } catch (error) {
+    console.error(error); // Log any unhandled exceptions to the console
+    alert('An error occurred during registration');
+  }
+} 
   };
-
   return (
     <div className="ft-info-p2">
       <p className="ft-input-title">Stay Update to our Newsletter</p>
@@ -38,14 +58,14 @@ function SubscribeNewsletter() {
         inputMode="email"
         className="ft-input"
         placeholder="Enter your email address"
-        value={inputEmail}
-        onChange={handleEmailInput}
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
       />
       <button
         className="text-appointment-btn"
         type="button"
         disabled={isButtonDisabled}
-        onClick={handleBookAppointmentClick}
+        onClick={handleEmailInput}
       >
         Subscribe
       </button>
@@ -56,3 +76,7 @@ function SubscribeNewsletter() {
 }
 
 export default SubscribeNewsletter;
+
+
+
+

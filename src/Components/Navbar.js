@@ -1,45 +1,40 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Logo from './Logo';
 import {
-  faCommentDots,
   faBars,
-  faXmark,
+  faXmark, // Import the user icon
 } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/Navbar.css";
-import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
+import { Link} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
-  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
-
+  const navigate = useNavigate();
+  
   const openNav = () => {
     setNav(!nav);
   };
-
-  const handleChatBtnClick = () => {
-    if (!isButtonDisabled) {
-      toast.info("Experiencing high traffic, Please wait a moment.", {
-        position: toast.POSITION.TOP_CENTER,
-        onOpen: () => setIsButtonDisabled(true),
-        onClose: () => setIsButtonDisabled(false),
-      });
-    }
-  };
-
+const navigateToLab=()=> {
+  navigate("/lab");
+}
   return (
     <div className="navbar-section">
-      <h1 className="navbar-title">
-        <Link to="/">
-          Health <span className="navbar-sign">+</span>
-        </Link>
-      </h1>
+      <nav className="navbar">
+      <br></br><br></br><br></br><br></br> <Logo />
+        <h1 className="navbar-title">
+          <Link to="/">
+            Health <span className="navbar-sign">+</span>
+          </Link>
+        </h1>
+      </nav>
 
       {/* Desktop */}
       <ul className="navbar-items">
         <li>
           <Link to="/" className="navbar-links">
-            Home
+          &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Home
           </Link>
         </li>
         <li>
@@ -58,21 +53,20 @@ function Navbar() {
           </a>
         </li>
         <li>
-          <a href="#doctors" className="navbar-links">
-            Doctors
+          <a href="/Health-Plus/lab" 
+          className="navbar-links"
+          onClick={navigateToLab}>
+            Laboratory Services
           </a>
-        </li>
+        </li>&emsp;&emsp;&emsp;&emsp;
       </ul>
 
-      <button
-        className="navbar-btn"
-        type="button"
-        disabled={isButtonDisabled}
-        onClick={handleChatBtnClick}
-      >
-        <FontAwesomeIcon icon={faCommentDots} /> Live Chat
-      </button>
-
+      {/* Profile Icon */}
+      <Link to="/loginform" className="profile-link">
+      <img src={"https://cdn-icons-png.flaticon.com/512/3177/3177440.png"} 
+      alt="Custom Profile"  className="custom-profile-icon" />
+&emsp;
+</Link>
       {/* Mobile */}
       <div className={`mobile-navbar ${nav ? "open-nav" : ""}`}>
         <div onClick={openNav} className="mobile-navbar-close">
@@ -101,13 +95,8 @@ function Navbar() {
             </a>
           </li>
           <li>
-            <a onClick={openNav} href="#doctors">
-              Doctors
-            </a>
-          </li>
-          <li>
-            <a onClick={openNav} href="#contact">
-              Contact
+            <a onClick={openNav} href="/lab">
+              Laboratory Services
             </a>
           </li>
         </ul>

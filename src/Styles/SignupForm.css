@@ -1,0 +1,125 @@
+/* SignupForm.css */
+.home-section {
+  background-position: 750px;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: 1500px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 550px;
+    background-color: rgb(202, 205, 209);
+  /* Additional styles for the home-section if needed */
+}
+.signup-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.7); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .signup-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  
+  .form-group input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .form-group input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Add additional styles as needed */
+  /* Modal.css */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  }
+  
+  .form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 580px;
+    max-height: 80%; /* Set a maximum height */
+    overflow-y: auto; 
+    height: 800px;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .links {
+    margin-top: 10px; /* Adjust the margin as needed */
+  }
+  
+  .links a {
+    display:block;
+    text-decoration: none;
+    color: #007bff; /* Link color */
+    font-weight: bold;
+    margin-bottom: 10px; /* Adjust the margin as needed */
+    font-size: 20px;
+  }
+  
+  .links a:hover {
+    color: #0056b3; /* Hover color */
+  }
+  
+  /* Additional styling for specific links if needed */
+  .links a.link1 {
+    color: #ff0000; /* Red color for Link 1 */
+  }
+  
+  .links a.link2 {
+    color: #00ff00; /* Green color for Link 2 */
+  }
+  
+  .links a.link3 {
+    color: #ff00ff; /* Purple color for Link 3 */
+  }
+  

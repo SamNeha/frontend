@@ -1,0 +1,246 @@
+
+.Content{
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    background-image: url('https://t3.ftcdn.net/jpg/02/16/47/22/360_F_216472247_cT66WDoS0fp1s3wC7eaykMJNDGVbOBPq.jpg');
+    background-size: cover;
+    filter: blur(1px);
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+  }
+  
+  .LeftSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    color: white;
+    width: 30%;
+    height: 100%;
+  }
+  .BoldText {
+    font-size: 70px; /* Increase font size for the top text */
+    font-weight: bold; /* Make it bold */
+    color: black;
+  }
+  
+  .NormalText {
+    font-size: 24px; /* Font size for the rest of the text */
+    color: black; /* Set the text color to white */
+    font-weight: bold;  
+}
+  
+  .Text {
+    font-size: 24px;
+    color: black ;
+      
+}
+  
+  .Button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 30px;
+  }
+  .BackButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -300px;
+    margin-right: 500px; /* Add right margin to separate the back button from the text */
+  }
+  /* DoctorPortalCards.css */
+
+.CardContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Card {
+  width: 600px;
+  height: 250px;
+  border: 1px solid #000;
+  text-align: center;
+  padding: 10px;
+  border-radius: 80px;
+}
+
+.GreenCard {
+  background-color:#0b5d5d;
+  color: white;
+}
+
+.BlackCard {
+  background-color: rgb(43, 37, 37);
+  color: white;
+}
+.CardImage {
+  width: 130px;
+  height: 130px;
+  border-radius: 80%;
+  float:left; /* Position the image to the left */
+  margin-left: 60px;
+  margin-top: 40px; /* Adjust the margin to control the spacing */
+}
+h2 {
+  font-size: 30px;
+  margin: 50px 0;
+}
+
+p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+/* Add these styles to your existing CSS file */
+
+.ServicesContainer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgb(225, 220, 220);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 620px;
+}
+
+.ServicePartitions {
+  display: flex;
+  justify-content: space-around;
+}
+.ServicePartitions p{
+  text-align: left;
+  font-size: 20px;
+}
+.ServicePartition {
+  flex: 1;
+  padding: 20px;
+  border: 0px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  background-color:transparentS;
+  height: 200px;
+}
+
+h3 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+}
+.ServiceIcon{
+  font-size: 140px;
+  color: rgb(141, 141, 236);
+}
+
+/* Add these styles to your existing CSS file */
+
+.OurDoctorsContainer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.OurDoctorsContainer h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.DoctorProfiles {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.DoctorProfile {
+  flex: 1;
+  max-width: 250px;
+  padding: 20px;
+  border: 0px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: transparent;
+}
+
+.DoctorImage {
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+.DoctorProfile h3 {
+  font-size: 24px;
+  text-align: center;
+  color: #333;
+  margin-top: 10px;
+}
+
+.DoctorProfile p {
+  font-size: 20px;
+  color: #555;
+}
+
+
+/* Add styles for the black container */
+.BlackContainer {
+  background-image: url("https://www.odysseyis.com/wp-content/uploads/2019/05/Odyssey-forms-background.jpg");
+  color: #fff;
+  padding: 20px;
+  text-align:  center;
+  height: 720px;
+}
+
+/* Style the form elements */
+.ContactForm {
+  max-width: 700px;
+  max-height: 800px;
+  margin: 0 auto;
+}
+
+.ContactForm h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.ContactForm input, .ContactForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #555;
+  background-color: #474343;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.ContactForm input::placeholder, .ContactForm textarea::placeholder {
+  color: #aaa;
+ 
+}
+
+.ContactForm button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.ContactForm button:hover {
+  background-color: #0056b3;
+}
+
+

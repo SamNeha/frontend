@@ -1,8 +1,18 @@
+.appointment-form-section {
+    background-image: url('https://img.freepik.com/premium-photo/portrait-asian-female-doctor-with-cheerful-face-pointing-sideways_296537-191.jpg');
+    background-size: 1280px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 750px;
+    background-color: rgb(234, 229, 229);
+  }
 .form-container {
     padding: 32px;
-    display: flex;
+    display:flex;
     flex-direction: column;
     gap: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin:0px -500px;
     background: linear-gradient(to right, #ECF2FF, #FBFCFF);
 }
 .form-title {
@@ -25,7 +35,7 @@
 }
 /* Form */
 .form-content label {
-    margin: 0 0 16px 0;
+    margin: 0 0 18px 50px;
     display: block;
     font-family: 'Rubik', sans-serif;
     font-size: 24px;
@@ -37,18 +47,18 @@
     padding: 0 4px 0 0;
 }
 .form-content label :is(input, select) {
-    width: 100%;
+    width: 80%;
     margin: 8px 0;
     padding: 0 12px;
     display: block;
-    height: 40px;
+    height: 60px;
     color: black;
     border: 1px solid transparent;
     border-radius: 6px;
-    background-color: #c9def4;
+    background-color:white;
     outline: transparent;
     font-family: 'Rubik', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: .7px;
 }
 /* Success Message */
@@ -68,8 +78,12 @@
     letter-spacing: .7px;
     line-height: 1.7rem;
 }
+.legal-footer{
+    margin-left: 265px;
+    margin-top: 900px;
+}
 /* Responsive */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
     .form-container {
         padding: 24px;
     }
@@ -84,6 +98,6 @@
     }
     .success-message {
         margin: 12px 0 0 0;
-        font-size: 18px;
+        font-size: 20px;
     }
 }

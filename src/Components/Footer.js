@@ -1,9 +1,27 @@
 import React from "react";
+import Swal from "sweetalert2";
 import "../Styles/Footer.css";
 import SubscribeNewsletter from "./SubscribeNewsletter";
 import { Link } from "react-router-dom";
 
 function Footer() {
+  const copyContactNumber = () => {
+    const contactNumber = "+022 5454 5454"; // Replace with your actual contact number
+    const textField = document.createElement("textarea");
+    textField.innerText = contactNumber;
+    document.body.appendChild(textField);
+    textField.select();
+    document.execCommand("copy");
+    document.body.removeChild(textField);
+
+    // Show a SweetAlert to inform the user that the number has been copied
+    Swal.fire({
+      title: "Copied to Clipboard!",
+      text: "The contact number has been copied to your clipboard.",
+      icon: "success",
+    });
+  };
+
   return (
     <div className="footer-section">
       <div className="footer-container">
@@ -29,16 +47,13 @@ function Footer() {
               <a href="#services">Emergency Care</a>
             </li>
             <li>
-              <a href="#services">Heart Disease</a>
+              <a href="#services">Laboratory and diagnostic care</a>
             </li>
             <li>
-              <a href="#services">Dental Care</a>
+              <a href="/Health-Plus/portal">Patient portal</a>
             </li>
             <li>
-              <a href="#services">Prescription</a>
-            </li>
-            <li>
-              <a href="#services">Insights for doctors</a>
+              <a href="#services">general surgeries</a>
             </li>
           </ul>
         </div>
@@ -68,30 +83,30 @@ function Footer() {
           <p className="ft-list-title">Talk To Us</p>
           <ul className="ft-list-items">
             <li>
-              <a href="mailto:support@healthplus.com">support@healthplus.com</a>
+              <a href="mailto:nehamurthy96@gmail.com">support@healthplus.com</a>
             </li>
             <li>
-              <a href="mailto:appointment@healthplus.com">
+              <a href="mailto:nehamurthy96@gmail.com">
                 appointment@healthplus.com
               </a>
             </li>
             <li>
-              <a href="tel:+022 5454 5252">+022 5454 5252</a>
+            <span onClick={copyContactNumber}>+022 5454 5454</span>
             </li>
             <li>
-              <a href="tel:+022 2326 6232">+022 2326 6232</a>
+            <span onClick={copyContactNumber}>+022 2326 2326</span>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="ft-copyright">
-        <p>© 2013-2023 Health+. All rights reserved.</p>
+        <p>© 2020-2025 Health+ All rights reserved.</p>
 
         <ul className="ft-social-links">
           <li>
             <a
-              href="https://linkedin.com/in/Alkaison/"
+             // href="https://linkedin.com/in/Alkaison/"//
               title="LinkedIn"
               target="_blank"
               rel="noopener noreferrer"
@@ -108,7 +123,7 @@ function Footer() {
 
           <li>
             <a
-              href="https://facebook.com/"
+             // href="https://facebook.com/"
               title="FaceBook"
               target="_blank"
               rel="noopener noreferrer"
@@ -125,7 +140,7 @@ function Footer() {
 
           <li>
             <a
-              href="https://x.com/Alkaison/"
+              //href="https://x.com/Alkaison/"
               title="Twitter"
               target="_blank"
               rel="noopener noreferrer"
