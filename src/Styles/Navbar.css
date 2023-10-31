@@ -4,10 +4,10 @@
     justify-content: space-between;
     align-items: center;
     height: 120px;
-    background-image: url("D:\case tools\Health-Plus\src\Assets\nav.jpg");
+    background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQOUbD4_wv1og1xpge5dSAjJcua-8TAOeaLXpIX7K1gCHZ69bvK");
     position: fixed;
     width: 2295px;
-    background-repeat: no-repeat;
+    
 }
 .navbar-title a {
     color: #1A8EFD;

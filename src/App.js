@@ -1,13 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Route ,Routes} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
+
+// Import frontend components
 import Home from "./Pages/Home";
 import Legal from "./Pages/Legal";
 import NotFound from "./Pages/NotFound";
 import Appointment from "./Pages/Appointment";
 import Portal from "./Pages/Portal";
 import Lab from "./Pages/Lab";
-import Cart from './Components/Cart';
+import Cart from "./Components/Cart";
 import LoginForm from "./Components/LoginForm";
 import SignupForm from "./Components/SignupForm";
 import DoctorSignupForm from "./Components/DoctorSignupForm";
@@ -18,8 +20,8 @@ import DoctorLogin from "./Components/DoctorLogin";
 import DoctorSignup from "./Components/DoctorSignup";
 import CheckoutForm from "./Components/CheckoutForm";
 import DoctorPortal from "./Components/DoctorPortal";
+
 function App() {
- 
   return (
     <div className="App">
       <Router basename="/Health-Plus">
@@ -30,7 +32,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/portal" element={<Portal />} />
           <Route path="/lab" element={<Lab />} />
-          <Route path="/cart" component={Cart} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/loginform" element={<LoginForm />} />
           <Route path="/signupform" element={<SignupForm />} />
           <Route path="/doctorsignup" element={<DoctorSignupForm />} />
@@ -41,7 +43,7 @@ function App() {
           <Route path="/doclogin" element={<DoctorLogin />} />
           <Route path="/docsignup" element={<DoctorSignup />} />
           <Route path="/docportal" element={<DoctorPortal />} />
-          </Routes>
+        </Routes>
       </Router>
     </div>
   );

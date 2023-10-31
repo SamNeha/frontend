@@ -10,6 +10,7 @@ function Port() {
   const [user, setUser] = useState(null);
   const [userAppointments, setUserAppointments] = useState([]);
 
+  
   useEffect(() => {
     // Fetch user details from the server using the JWT token
     const token = localStorage.getItem("token");

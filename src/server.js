@@ -9,6 +9,8 @@ const jwt = require('jsonwebtoken');
 const app = express();
 const sub = express();
 app.use(express.json());
+
+
 // Connect to MongoDB
 mongoose.connect('mongodb://127.0.0.1:27017/signup', {
   useNewUrlParser: true,
@@ -263,6 +265,7 @@ app.get('/Health-Plus/signupform', (req, res)=> {
 });
 app.get('/Health-Plus/docportal', (req, res)=> {
 });
+
 app.get('/getUserDetails', async (req, res) => {
   try {
     const token = req.headers.authorization.split(' ')[1];

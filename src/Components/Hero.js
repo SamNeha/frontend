@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Doctor from "../Assets/doc.jpg";
 import video from "../Assets/video.mp4";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp, faVideo } from "@fortawesome/free-solid-svg-icons";

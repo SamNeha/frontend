@@ -4,8 +4,8 @@
     justify-content: center;
     align-items: center;
     gap: 24px;
-    background-image: url("D:\case tools\Health-Plus\src\Assets\quote.jpg");
-    background-repeat: no-repeat;
+    background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSCCiE51XYq5poP_Nl2zUt1HgdCa6uNTdaDreT1UaWJ25JT4dYk");
+    background-size: 2300px;
     color:powderblue;   
 }
 @keyframes slideInLeft {

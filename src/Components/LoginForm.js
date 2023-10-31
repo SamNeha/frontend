@@ -55,7 +55,6 @@ function LoginForm() {
           <label>Username:</label>
           <input
             type="username"
-           
                   name="username"
                   required
                   placeholder="Username"

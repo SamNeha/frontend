@@ -4,10 +4,6 @@ import '../Styles/DoctorPortal.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeartPulse, faTruckMedical, faBookMedical} from "@fortawesome/free-solid-svg-icons";
 import Footer from '../Components/Footer';
-import profile1 from "../Assets/profile-1.png";
-import profile2 from "../Assets/profile-2.png";
-import profile3 from "../Assets/profile-3.png";
-import profile4 from "../Assets/profile-4.png";
 import Swall from "sweetalert2";
 const DoctorPortal = () => {
 
@@ -122,28 +118,28 @@ const DoctorPortal = () => {
   <div className="DoctorProfiles">
     {/* Doctor 1 */}
     <div className="DoctorProfile">
-      <img src={profile1} alt="Doctor 1" className="DoctorImage" />
+      <img src={"https://pngimg.com/uploads/doctor/small/doctor_PNG16043.png"} alt="Doctor 1" className="DoctorImage" />
       <h3>Dr. Kathryn Murphy</h3>
       <p>Specialty: General Surgeon</p>
     </div>
 
     {/* Doctor 2 */}
     <div className="DoctorProfile">
-      <img src={profile2} alt="Doctor 2" className="DoctorImage" />
+      <img src={"https://pngimg.com/uploads/doctor/small/doctor_PNG16017.png"} alt="Doctor 2" className="DoctorImage" />
       <h3>Dr. Jacob Jones</h3>
       <p>Specialty: Hematologists</p>
     </div>
 
     {/* Doctor 3 */}
     <div className="DoctorProfile">
-      <img src={profile3} alt="Doctor 3" className="DoctorImage" />
+      <img src={"https://pngimg.com/uploads/doctor/small/doctor_PNG16031.png"} alt="Doctor 3" className="DoctorImage" />
       <h3>Dr. Jenny Wilson</h3>
       <p>Specialty: Endocrinologists</p>
     </div>
 
     {/* Doctor 4 */}
     <div className="DoctorProfile">
-      <img src={profile4} alt="Doctor 4" className="DoctorImage" />
+      <img src={"https://pngimg.com/uploads/doctor/small/doctor_PNG15988.png"} alt="Doctor 4" className="DoctorImage" />
       <h3>Dr. Albert Flores</h3>
       <p>Specialty: Hematologists</p>
     </div>
