@@ -28,7 +28,7 @@ function AppointmentForm() {
       Swall.fire('Please fill in all fields','','error');
     } else {
       try {
-        const response = await fetch('/app', {
+        const response = await fetch('https://backend-idkg.onrender.com/app', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
