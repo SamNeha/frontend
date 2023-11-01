@@ -50,7 +50,7 @@ function Footer() {
               <a href="#services">Laboratory and diagnostic care</a>
             </li>
             <li>
-              <a href="/Health-Plus/portal">Patient portal</a>
+              <a href="/portal">Patient portal</a>
             </li>
             <li>
               <a href="#services">general surgeries</a>

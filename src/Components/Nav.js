@@ -52,17 +52,17 @@ function Nav() {
           </Link>
         </li>
         <li>
-          <a href="/Health-Plus/lab" className="navbar-links">
+          <a href="/lab" className="navbar-links">
             LaboratoryServices
           </a>
         </li>
         <li>
-          <a href="/Health-Plus/loginform" className="navbar-links" onClick={navigateToLogin}>
+          <a href="/loginform" className="navbar-links" onClick={navigateToLogin}>
             Login
           </a>
         </li>
         <li>
-          <a href="/Health-Plus/signupform" className="navbar-links"onClick={navigateToSignup}>
+          <a href="/signupform" className="navbar-links"onClick={navigateToSignup}>
             signup
           </a>
         </li> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
