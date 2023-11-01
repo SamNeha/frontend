@@ -28,7 +28,7 @@ function LoginForm() {
         localStorage.setItem('token', data.token);
         navigate('/portal');
       } else {
-        alert('Invalid email or password'); // Show an alert for errors
+        alert('Invalid username or password'); // Show an alert for errors
       }
     } catch (error) {
       console.error('Error:', error);
