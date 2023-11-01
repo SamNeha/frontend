@@ -66,7 +66,7 @@ function PatientNavbar() {
             </a>
           </li>
           <li>
-            <a onClick={openNav} href="/Health-Plus/lab">
+            <a onClick={openNav} href="/lab">
               Laboratory Services
             </a>
           </li>

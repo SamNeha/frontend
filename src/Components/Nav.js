@@ -83,7 +83,7 @@ function Nav() {
           </li>
          
           <li>
-            <a onClick={openNav} href="/Health-Plus/lab">
+            <a onClick={openNav} href="/lab">
               LaboratoryServices
             </a>
           </li>
