@@ -20,7 +20,7 @@ function SubscribeNewsletter() {
       });
     } else {
       try {
-        const response = await fetch('/sub', {
+        const response = await fetch('https://backend-whdv.onrender.com/sub', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
