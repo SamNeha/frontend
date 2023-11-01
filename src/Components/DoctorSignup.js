@@ -25,7 +25,7 @@ function DoctorSignup({ onClose }) {
       alert('Please fill in all fields');
     } else {
       try {
-        const response = await fetch('/docsignup', {
+        const response = await fetch('https://backend-whdv.onrender.com/docsignup', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
