@@ -263,13 +263,13 @@ function CheckoutForm({ onBook, onClose ,isAuthenticated, onLogout}) {
   return (
   
     <div><br></br><br></br><br></br><br></br><br></br><br></br>
-          {user && (
+         
         <div className="profile">
-          <p style={{fontSize:"26px"}}><b> LOGGED IN BY, </b>{user.username}</p>
-          <p style={{fontSize:"26px"}}><b>Email:</b> {user.email}</p>
+          <p style={{fontSize:"26px"}}><b> LOGGED IN BY, </b>Hindu</p>
+          <p style={{fontSize:"26px"}}><b>Email:</b>hindu@gmail.com</p>
           {/* Add more user details here */}
         </div>
-      )}
+  
      <Carousel showThumbs={false} infiniteLoop={true} autoPlay={true} showStatus={false}>
         <div>
           <img src="https://www.clearstate.com/wp-content/uploads/2021/02/The-traditional-clinical-labs-evolve-scaled.jpg" alt="Image 1"
