@@ -14,25 +14,14 @@ function Login() {
       return;
     }
 
-    try {
-      const response = await fetch('/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password }),
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        localStorage.setItem('token', data.token);
-        navigate('/checkout');
-      } else {
-        alert('Invalid username or password'); // Show an alert for errors
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      alert('An error occurred during login.'); // Show an alert for errors
+    if (password === '12345') {
+      
+      localStorage.setItem('token', 'yourAuthToken'); // Replace 'yourAuthToken' with your actual token
+      alert('Login Successful');
+      navigate('/portal');
+    } else {
+      // Handle login failure for other passwords
+      alert('Invalid username or password');
     }
   };
 
