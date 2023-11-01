@@ -17,7 +17,7 @@ function DoctorLoginForm() {
       return;
   }
   try {
-    const response = await fetch('/doclogin', {
+    const response = await fetch('https://backend-whdv.onrender.com/doclogin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
