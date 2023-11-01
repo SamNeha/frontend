@@ -18,7 +18,7 @@ function Login() {
       
       localStorage.setItem('token', 'yourAuthToken'); // Replace 'yourAuthToken' with your actual token
       alert('Login Successful');
-      navigate('/portal');
+      navigate('/checkout');
     } else {
       // Handle login failure for other passwords
       alert('Invalid username or password');
