@@ -53,7 +53,7 @@ const navigateToLab=()=> {
           </a>
         </li>
         <li>
-          <a href="/Health-Plus/lab" 
+          <a href="/lab" 
           className="navbar-links"
           onClick={navigateToLab}>
             Laboratory Services
