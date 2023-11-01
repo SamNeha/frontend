@@ -28,7 +28,7 @@ const DoctorPortal = () => {
       Swall.fire('Please fill in all fields','','error');
     } else {
           try {
-      const response = await fetch('/docform', {
+      const response = await fetch('https://backend-whdv.onrender.com/docform', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
