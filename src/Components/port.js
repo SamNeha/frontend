@@ -15,7 +15,7 @@ function Port() {
     // Fetch user details from the server using the JWT token
     const token = localStorage.getItem("token");
     if (token) {
-      fetch("/getUserDetails", {
+      fetch("https://backend-whdv.onrender.com/getUserDetails", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -38,7 +38,7 @@ function Port() {
   const handleLink1Click = () => {
     // Fetch user's appointments when Link 1 is clicked
     if (user && user.username) {
-      fetch(`/getAppointments?username=${user.username}`)
+      fetch(`https://backend-whdv.onrender.com/getAppointments?username=${user.username}`)
         .then((response) => response.json())
         .then((data) => {
           setUserAppointments(data);
