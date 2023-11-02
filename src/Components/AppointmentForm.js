@@ -13,7 +13,12 @@ function AppointmentForm() {
   const [patientNumber, setPatientNumber] = useState("");
   const [patientGender, setPatientGender] = useState("default");
   const [appointmentTime, setAppointmentTime] = useState("");
- 
+  const [selectedFile, setSelectedFile] = useState(null); 
+   
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setSelectedFile(file);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,25 +27,23 @@ function AppointmentForm() {
       patientName === '' ||
       patientNumber === '' ||
       patientGender === '' ||
-      appointmentTime === '' 
+      appointmentTime === '' ||
+      selectedFile === null
       
     ) {
       Swall.fire('Please fill in all fields','','error');
     } else {
+      const formData = new FormData();
+      formData.append('patientName', patientName);
+      formData.append('patientNumber', patientNumber);
+      formData.append('patientGender', patientGender);
+      formData.append('appointmentTime', appointmentTime);
+      formData.append('file', selectedFile);
       try {
         const response = await fetch('https://backend-whdv.onrender.com/app', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-           
-           patientName,
-           patientNumber,
-           patientGender,
-           appointmentTime,
-          }),
-        });
+          body:formData,
+      });
       
         if (response.ok) {
           
@@ -122,6 +125,18 @@ function AppointmentForm() {
               onChange={(e) => setAppointmentTime(e.target.value)}
               id="appointmentTime"
               name="appointmentTime"
+              required
+            />
+          </label>
+          <br>
+          </br>
+          <label>
+            Attach File:
+            <input
+              type="file"
+              id="file"
+              name="file"
+              onChange={handleFileChange}
               required
             />
           </label>
