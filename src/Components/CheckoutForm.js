@@ -245,7 +245,7 @@ function CheckoutForm({ onBook, onClose ,isAuthenticated, onLogout}) {
     // Fetch user details from the server using the JWT token
     const token = localStorage.getItem('token');
     if (token) {
-      fetch('/getUserDetails', {
+      fetch('https://backend-whdv.onrender.com/getUserDetails', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
