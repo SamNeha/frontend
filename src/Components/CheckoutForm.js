@@ -265,8 +265,8 @@ function CheckoutForm({ onBook, onClose ,isAuthenticated, onLogout}) {
     <div><br></br><br></br><br></br><br></br><br></br><br></br>
          
         <div className="profile">
-          <p style={{fontSize:"26px"}}><b> LOGGED IN BY, </b>gawthu</p>
-          <p style={{fontSize:"26px"}}><b>Email:</b>gawthu@gmail.com</p>
+          <p style={{fontSize:"26px"}}><b> LOGGED IN BY, </b>{user.username}</p>
+          <p style={{fontSize:"26px"}}><b>Email:</b>{user.email}</p>
           {/* Add more user details here */}
         </div>
   
