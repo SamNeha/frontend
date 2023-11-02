@@ -263,12 +263,13 @@ function CheckoutForm({ onBook, onClose ,isAuthenticated, onLogout}) {
   return (
   
     <div><br></br><br></br><br></br><br></br><br></br><br></br>
-         
+    {user && (
         <div className="profile">
           <p style={{fontSize:"26px"}}><b>{user.username}</b></p>
           <p style={{fontSize:"26px"}}><b>{user.email}</b></p>
           {/* Add more user details here */}
         </div>
+  )}
   
      <Carousel showThumbs={false} infiniteLoop={true} autoPlay={true} showStatus={false}>
         <div>
